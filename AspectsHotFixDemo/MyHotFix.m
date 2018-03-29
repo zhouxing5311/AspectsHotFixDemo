@@ -50,7 +50,7 @@
     SEL sel = NSSelectorFromString(selectorName);
     [klass aspect_hookSelector:sel withOptions:option usingBlock:^(id aspectInfo){
         AspectInfo *myInfo = (AspectInfo *)aspectInfo;
-        [fixImpl callWithArguments:@[myInfo.instance, myInfo.originalInvocation, myInfo.arguments]];
+        [fixImpl callWithArguments:@[myInfo.instance, myInfo.originalInvocation, myInfo.arguments==nil?@[]:myInfo.arguments]];
         
     } error:nil];
 }

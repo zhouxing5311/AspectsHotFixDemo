@@ -20,7 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     testArray = [NSMutableArray array];
 }
 
@@ -29,9 +28,15 @@
     [self addObject:nil];
 }
 
+
+
 - (void)addObject:(NSString *)string {
     [testArray addObject:string];
     NSLog(@"添加成功");
+}
+
+- (void)testMethod {
+    NSLog(@"----hotfix调用了测试方法----");
 }
 
 @end

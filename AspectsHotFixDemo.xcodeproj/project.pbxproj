@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9480541206CE55900DC5198 /* LBYFix.m in Sources */ = {isa = PBXBuildFile; fileRef = D948053F206CE55900DC5198 /* LBYFix.m */; };
 		D97B0EF22058AFD5005BA355 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D97B0EF12058AFD5005BA355 /* AppDelegate.m */; };
 		D97B0EF52058AFD5005BA355 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97B0EF42058AFD5005BA355 /* ViewController.m */; };
 		D97B0EF82058AFD5005BA355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D97B0EF62058AFD5005BA355 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D948053F206CE55900DC5198 /* LBYFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYFix.m; sourceTree = "<group>"; };
+		D9480540206CE55900DC5198 /* LBYFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYFix.h; sourceTree = "<group>"; };
 		D97B0EED2058AFD5005BA355 /* AspectsHotFixDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AspectsHotFixDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97B0EF02058AFD5005BA355 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D97B0EF12058AFD5005BA355 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				D97B0F072058AFF9005BA355 /* Aspects.m */,
 				D97B0F092058B016005BA355 /* MyHotFix.h */,
 				D97B0F0A2058B016005BA355 /* MyHotFix.m */,
+				D9480540206CE55900DC5198 /* LBYFix.h */,
+				D948053F206CE55900DC5198 /* LBYFix.m */,
 				D97B0EF02058AFD5005BA355 /* AppDelegate.h */,
 				D97B0EF12058AFD5005BA355 /* AppDelegate.m */,
 				D97B0EF32058AFD5005BA355 /* ViewController.h */,
@@ -157,6 +162,7 @@
 				D97B0EF22058AFD5005BA355 /* AppDelegate.m in Sources */,
 				D97B0F082058AFF9005BA355 /* Aspects.m in Sources */,
 				D97B0F0B2058B016005BA355 /* MyHotFix.m in Sources */,
+				D9480541206CE55900DC5198 /* LBYFix.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

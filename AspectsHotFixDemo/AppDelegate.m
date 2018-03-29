@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "MyHotFix.h"
+//#import "MyHotFix.h"
+#import "LBYFix.h"
 
 @interface AppDelegate ()
 
@@ -26,10 +27,15 @@
 - (void)repair {
     
     //修复
-    [MyHotFix fixIt];
+    [LBYFix fixIt];
     
-    NSString *fixScriptString = @"\
-    fixInstanceMethodReplace('ViewController', 'addObject:', function(instance, originInvocation, originArguments){ \
+    
+    //1.修复ViewController中的addObject添加空元素崩溃问题
+    NSString *fixScriptString1 = @"\
+    fixMethod('ViewController', 'addObject:', 1, false, function(instance, originInvocation, originArguments){ \
+    console.log(instance); \
+    console.log(originInvocation); \
+    console.log(originArguments); \
     if (originArguments[0] == null) { \
     console.log('字符串为空'); \
     } else { \
@@ -39,8 +45,17 @@
     \
     ";
     
-    [MyHotFix evalString:fixScriptString];
+    [LBYFix evalString:fixScriptString1];
     
+    
+    //2.在ViewController中的addObject方法内调用ViewController的testMethod方法
+    NSString *fixScriptString2 = @"\
+    fixMethod('ViewController', 'addObject:', 2, false, function(instance, originInvocation, originArguments){ \
+    runInstanceMethod('ViewController', 'testMethod'); \
+    }); \
+    \
+    ";
+    [LBYFix evalString:fixScriptString2];
 }
 
 
